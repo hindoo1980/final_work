@@ -8,7 +8,7 @@
     {
         Random rand = new Random();
 
-        int strlen = rand.Next(1, 8);
+        int strlen = rand.Next(1, 7);
         int rVal;
         string rStr = string.Empty;
         char ch;
@@ -26,7 +26,7 @@
     {
         Random rand = new Random();
 
-        int randArrlen = rand.Next(20, 30);
+        int randArrlen = rand.Next(17, 25);
 
         string[] randArr  = new string[randArrlen];
         
@@ -67,7 +67,17 @@
 
     static void Main() 
     {
+
+    Console.WriteLine($"из следующего сгенерированного массива строк:");
+
     string[] randArr =  makeRandArr();
+
+    for(int i = 0; i < randArr.Length; i++)
+    {
+        Console.Write($"{i}({randArr[i]}) ");
+    }
+
+
     int j = 0;
 
     for(int i = 0; i < randArr.GetLength(0); i++)
@@ -78,6 +88,8 @@
            }
         }
 
+    Console.WriteLine();
+    Console.WriteLine($"получили следующий массив, где все строки содержат не более 3 символов:");
 
     string[] emptyFiltArr = new string[j];
 
@@ -85,7 +97,7 @@
 
     for(int i = 0; i < cutArr.Length; i++)
         {
-            Console.WriteLine(cutArr[i]);
+            Console.Write($"{i}({cutArr[i]}) ");
         }
   }
 }
