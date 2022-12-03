@@ -55,7 +55,21 @@
  
     static void Main() 
     {
+
     string[] randArr =  makeRandArr();
+
+
+    Console.WriteLine($"из следующего сгенерированного массива строк:");
+
+        for(int i = 0; i < randArr.Length; i++)
+    {
+        Console.Write($"{i}({randArr[i]}) ");
+    }
+
+
+    Console.WriteLine();
+    Console.WriteLine($"получили следующий массив, где все строки содержат не более 3 символов:");
+
     int j = 0;
 
     for(int i = 0; i < randArr.GetLength(0); i++)
@@ -72,7 +86,7 @@
 
     for(int i = 0; i < cutArr.Length; i++)
         {
-            Console.WriteLine(cutArr[i]);
+            Console.Write($"{i}({cutArr[i]}) ");
         }
   }
 }

@@ -77,6 +77,8 @@
         Console.Write($"{i}({randArr[i]}) ");
     }
 
+    Console.WriteLine();
+    Console.WriteLine($"получили следующий массив, где все строки содержат не более 3 символов:");
 
     int j = 0;
 
@@ -88,8 +90,6 @@
            }
         }
 
-    Console.WriteLine();
-    Console.WriteLine($"получили следующий массив, где все строки содержат не более 3 символов:");
 
     string[] emptyFiltArr = new string[j];
 
